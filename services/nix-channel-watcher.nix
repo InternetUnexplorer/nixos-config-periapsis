@@ -14,27 +14,32 @@ let
     hash = "sha256-ewD5SVD3eXzIDGCTuIMxutUOAHTQ1DoHnnCsTkVgDZg=";
   };
 
-  nixos-unstable-hooks = pkgs.runCommandNoCC "nixos-unstable.hooks" { } ''
-    mkdir $out
-    for repo in ${toString repositories}; do
-    cat > $out/dispatch-''${repo##*/} << EOF
-    #!${pkgs.stdenv.shell}
-    set -eu
-    curl -X POST \\
-      -H "Accept: application/vnd.github.v3+json" \\
-      -H "Authorization: token \$GITHUB_TOKEN" \\
-      -d "{\"event_type\": \"Channel updated: \$1@\''${3:0:10}\", \"client_payload\": {\"channel\": \"\$1\"}}" \\
-      https://api.github.com/repos/$repo/dispatches
-    EOF
-    chmod +x $out/dispatch-''${repo##*/}
-    done
-  '';
+  nixos-unstable-hooks = let
+    requestData = builtins.toJSON {
+      event_type = "Channel updated: $1@\${3:0:10}";
+      client_payload.channel = "$1";
+    };
+
+    mkHook = repo:
+      pkgs.writers.writeBash "/dispatch-${builtins.baseNameOf repo}" ''
+        set -eu
+        curl -X POST \
+          -H "Accept: application/vnd.github.v3+json" \
+          -H "Authorization: token $GITHUB_TOKEN" \
+          -d "${lib.escape [ ''"'' ] requestData}" \
+          https://api.github.com/repos/${repo}/dispatches
+      '';
+
+  in pkgs.symlinkJoin {
+    name = "nixos-unstable.hooks";
+    paths = map mkHook repositories;
+  };
 
 in {
   systemd.services.nix-channel-watcher = {
     description = "Nix channel watcher";
 
-    path = [ pkgs.curl pkgs.python3 ];
+    path = [ pkgs.curlMinimal pkgs.python3 ];
 
     script = ''
       cd $STATE_DIRECTORY
