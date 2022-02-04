@@ -40,6 +40,8 @@
     command-not-found.enable = false;
   };
 
+  security.sudo.wheelNeedsPassword = false;
+
   users.users.alex = {
     isNormalUser = true;
     shell = pkgs.fish;
