@@ -5,7 +5,10 @@
 { config, pkgs, lib, modulesPath, ... }:
 
 {
-  imports = [ (modulesPath + "/virtualisation/google-compute-image.nix") ];
+  imports = [
+    (modulesPath + "/virtualisation/google-compute-image.nix")
+    ./services/caddy.nix
+  ];
 
   nix = {
     package = pkgs.nixFlakes;
