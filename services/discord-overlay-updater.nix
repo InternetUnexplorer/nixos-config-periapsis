@@ -1,5 +1,13 @@
 { config, pkgs, lib, modulesPath, ... }:
 
+# The nix-channel-watcher service checks for Discord desktop app version updates
+# periodically and sends a repository_dispatch event to
+# InternetUnexplorer/discord-overlay when a version update is available.
+#
+# It expects /etc/github-token to exist and contain GITHUB_TOKEN=<token>, where
+# <token> is a GitHub personal access token with the repo scope (used to send
+# the repository_dispatch events)
+
 let
   discord-overlay = pkgs.fetchFromGitHub {
     owner = "InternetUnexplorer";
