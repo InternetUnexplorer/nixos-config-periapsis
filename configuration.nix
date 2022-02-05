@@ -8,6 +8,7 @@
   imports = [
     (modulesPath + "/virtualisation/google-compute-image.nix")
     ./services/caddy.nix
+    ./services/discord-overlay-updater.nix
     ./services/nix-channel-watcher.nix
   ];
 

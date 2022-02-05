@@ -37,7 +37,7 @@ let
 
 in {
   systemd.services.nix-channel-watcher = {
-    description = "Nix channel watcher";
+    description = "check for Nix channel updates";
 
     path = [ pkgs.curlMinimal pkgs.python3 ];
 
