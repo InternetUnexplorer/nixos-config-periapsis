@@ -57,7 +57,7 @@
 
   environment = {
     variables.EDITOR = "nvim";
-    systemPackages = with pkgs; [ busybox git htop neovim ];
+    systemPackages = with pkgs; [ busybox git htop neovim tmux ];
   };
 
   system.stateVersion = "22.05";
