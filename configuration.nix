@@ -19,18 +19,18 @@
     settings.trusted-users = [ "@wheel" ];
   };
 
-  # system.autoUpgrade = {
-  #   enable = true;
-  #   flake = "/etc/nixos";
-  #   dates = "monthly";
-  #   flags = [ "--update-input" "nixpkgs" ];
-  # };
-  #
-  # nix.gc = {
-  #   automatic = true;
-  #   dates = "monthly";
-  #   options = "--delete-older-than 3d";
-  # };
+  system.autoUpgrade = {
+    enable = true;
+    flake = "/etc/nixos";
+    dates = "monthly";
+    flags = [ "--update-input" "nixpkgs" ];
+  };
+
+  nix.gc = {
+    automatic = true;
+    dates = "monthly";
+    options = "--delete-old";
+  };
 
   boot.kernelPackages = pkgs.linuxPackages_hardened;
 
