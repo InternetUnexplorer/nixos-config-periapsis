@@ -18,7 +18,7 @@ let
 
 in {
   systemd.services.discord-overlay-updater = {
-    description = "check for Discord updates";
+    description = "Discord update checker";
 
     path = [ pkgs.python3 ];
 

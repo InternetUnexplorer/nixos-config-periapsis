@@ -10,6 +10,7 @@
     ./services/caddy.nix
     ./services/discord-overlay-updater.nix
     ./services/nix-channel-watcher.nix
+    ./services/oobot.nix
   ];
 
   nix = {
@@ -57,7 +58,14 @@
 
   environment = {
     variables.EDITOR = "nvim";
-    systemPackages = with pkgs; [ busybox git htop neovim tmux ];
+    systemPackages = with pkgs; [
+      busybox
+      git
+      htop
+      neovim
+      tmux
+      phinger-cursors
+    ];
   };
 
   system.stateVersion = "22.05";
