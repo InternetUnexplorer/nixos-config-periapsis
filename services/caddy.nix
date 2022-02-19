@@ -14,6 +14,8 @@
     root * /srv/periapsis.cc
     file_server
 
+    header / Strict-Transport-Security "max-age=31536000;"
+
     handle_errors {
       respond "{http.error.status_code} {http.error.status_text}"
     }
