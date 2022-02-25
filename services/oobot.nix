@@ -11,8 +11,8 @@ let
   oobot = pkgs.fetchFromGitHub {
     owner = "InternetUnexplorer";
     repo = "oobot";
-    rev = "5d3e27f32b207a8ff2583a6f14f839262fd6e865";
-    hash = "sha256-uf37G6DnfbFDm1nV+URulXv0OEA7k2/W+JUyrxmNLu4=";
+    rev = "9374b4fd5241c1e32b5034581992313396fa86cb";
+    hash = "sha256-/fSVgk1I/QhrOADZRRRWMElKbcNp6pt4FBGqDd1RxYA=";
   };
 
 in {
