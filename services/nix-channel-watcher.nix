@@ -73,6 +73,8 @@ in {
       StateDirectory = "nix-channel-watcher";
       TimeoutSec = 30;
 
+      Environment = "PYTHONUNBUFFERED=1";
+
       PrivateDevices = true;
       PrivateMounts = true;
       PrivateUsers = true;

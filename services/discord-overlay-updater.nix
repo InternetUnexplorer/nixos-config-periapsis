@@ -35,6 +35,8 @@ in {
       StateDirectory = "discord-overlay-updater";
       TimeoutSec = 60;
 
+      Environment = "PYTHONUNBUFFERED=1";
+
       PrivateDevices = true;
       PrivateMounts = true;
       PrivateUsers = true;

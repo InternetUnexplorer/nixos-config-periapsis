@@ -27,6 +27,8 @@ in {
       DynamicUser = true;
       EnvironmentFile = "/etc/oobot-env";
 
+      Environment = [ "PYTHONUNBUFFERED=1" "VERBOSE=1" ];
+
       PrivateDevices = true;
       PrivateMounts = true;
       PrivateUsers = true;
