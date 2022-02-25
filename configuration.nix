@@ -41,6 +41,10 @@
     kbdInteractiveAuthentication = false;
   };
 
+  networking.firewall.enable = true;
+
+  services.fail2ban.enable = true;
+
   programs = {
     fish.enable = true;
     command-not-found.enable = false;

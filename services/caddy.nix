@@ -20,4 +20,6 @@
       respond "{http.error.status_code} {http.error.status_text}"
     }
   '';
+
+  networking.firewall.allowedTCPPorts = [ 80 443 ];
 }
