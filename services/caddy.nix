@@ -13,6 +13,7 @@
   services.caddy.virtualHosts."periapsis.cc".extraConfig = ''
     root * /srv/periapsis.cc
     file_server
+    encode zstd gzip
 
     header / Strict-Transport-Security "max-age=31536000;"
 
