@@ -12,7 +12,6 @@ let
   repositories = [
     "InternetUnexplorer/nix-build-service"
     "InternetUnexplorer/nixpkgs-overlay"
-    "InternetUnexplorer/nixos-config"
   ];
 
   nix-channel-watcher = pkgs.fetchFromGitHub {
@@ -58,8 +57,7 @@ in {
       EOF
 
       # Set up the hooks
-      rm -f ./nixos-unstable.hooks
-      ln -s ${nixos-unstable-hooks} ./nixos-unstable.hooks
+      ln -snf ${nixos-unstable-hooks} ./nixos-unstable.hooks
 
       # Run the script
       python3 ${nix-channel-watcher}/channel-watcher.py

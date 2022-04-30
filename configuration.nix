@@ -56,8 +56,7 @@
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "wheel" ];
-    openssh.authorizedKeys.keys = with lib;
-      filter (k: k != "") (splitString "\n" (readFile ./authorized_keys));
+    openssh.authorizedKeys.keyFiles = [ ./authorized_keys ];
   };
 
   environment = {
@@ -68,7 +67,6 @@
       htop
       neovim
       tmux
-      phinger-cursors
     ];
   };
 
