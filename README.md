@@ -19,9 +19,9 @@ This is the NixOS configuration for [periapsis.cc](https://periapsis.cc). It is 
 $ rsync -rzlp --delete --rsync-path="sudo rsync" . periapsis.cc:/etc/nixos
 ```
 
-#### Build system configuration locally and copy to remote
+#### Build system configuration locally and activate on remote
 
 ```bash
-$ HOSTNAME=$(nix flake show --json | jq -r '.nixosConfigurations | keys[]')
-$ nix build ".#nixosConfigurations.\"$HOSTNAME\".config.system.build.toplevel"
-$ nix copy -s --to ssh://periapsis.cc ./result
+$ HOSTNAME=$(nix flake show --json | jq -r '.nixosConfigurations | keys[0]')
+$ nixos-rebuild switch --flake ".#$HOSTNAME" --target-host periapsis.cc
+```
