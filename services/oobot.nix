@@ -19,7 +19,10 @@ in {
   systemd.services.oobot = {
     description = "oobot";
 
-    path = [ (pkgs.python3.withPackages (p: [ p.discordpy ])) ];
+    path = [
+      (pkgs.python3.withPackages
+        (p: [ (p.discordpy.override { withVoice = false; }) ]))
+    ];
 
     script = "python3 ${oobot}/oobot.py";
 
