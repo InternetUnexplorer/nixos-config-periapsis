@@ -42,5 +42,7 @@ in {
       ProtectKernelModules = true;
       ProtectKernelTunables = true;
     };
+
+    wantedBy = [ "multi-user.target" ];
   };
 }
