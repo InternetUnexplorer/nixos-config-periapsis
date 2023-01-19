@@ -4,15 +4,14 @@
 # company in #oob).
 #
 # It expects /etc/oobot-env to exist and contain DISCORD_TOKEN=<token> and
-# DISCORD_CHANNEL=<channel>, where <token> is the token for the bot and
-# <channel> is the channel it should run in.
+# DISCORD_CHANNELS=<channel>. Refer to oobot's README for more information.
 
 let
   oobot = pkgs.fetchFromGitHub {
     owner = "InternetUnexplorer";
     repo = "oobot";
-    rev = "6c85c57dfeffd99a9ee06c018d77e21f4dc3a154";
-    hash = "sha256-EBnLk8ZefRhk6AtLs60gfViPf7gAEDhEeB8aJrnI5nA=";
+    rev = "2365f9ba21b69b95fda59f166aa60ecff8af6cdf";
+    hash = "sha256-kmtlSOYr2n9Ds3uWQQyqJCWKGPh/6g1/Ht241W7djlY=";
   };
 
 in {
