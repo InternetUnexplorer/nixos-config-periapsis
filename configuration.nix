@@ -20,13 +20,6 @@
     settings.trusted-users = [ "@wheel" ];
   };
 
-  system.autoUpgrade = {
-    enable = true;
-    flake = "/etc/nixos";
-    dates = "monthly";
-    flags = [ "--update-input" "nixpkgs" ];
-  };
-
   nix.gc = {
     automatic = true;
     dates = "weekly";
