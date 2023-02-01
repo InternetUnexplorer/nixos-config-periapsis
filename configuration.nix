@@ -49,6 +49,7 @@
     isNormalUser = true;
     shell = pkgs.fish;
     extraGroups = [ "wheel" ];
+    createHome = true;
     openssh.authorizedKeys.keyFiles = [ ./authorized_keys ];
   };
 
