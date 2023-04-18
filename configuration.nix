@@ -38,10 +38,12 @@
 
   services.fail2ban.enable = true;
 
-  programs = {
-    fish.enable = true;
-    command-not-found.enable = false;
+  programs.fish = {
+    enable = true;
+    useBabelfish = true;
   };
+
+  programs.command-not-found.enable = false;
 
   security.sudo.wheelNeedsPassword = false;
 
