@@ -5,8 +5,8 @@
 # channel is updated.
 #
 # It expects /etc/github-token to exist and contain GITHUB_TOKEN=<token>, where
-# <token> is a GitHub personal access token with the repo scope (used to send
-# the repository_dispatch events)
+# <token> is a GitHub fine-grained personal access token with write access for
+# the "Contents" permission (used to send the repository_dispatch events)
 
 let
   repositories = [ "InternetUnexplorer/nixpkgs-overlay" ];
