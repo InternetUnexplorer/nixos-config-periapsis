@@ -9,10 +9,7 @@
 # the repository_dispatch events)
 
 let
-  repositories = [
-    "InternetUnexplorer/nix-build-service"
-    "InternetUnexplorer/nixpkgs-overlay"
-  ];
+  repositories = [ "InternetUnexplorer/nixpkgs-overlay" ];
 
   nix-channel-watcher = pkgs.fetchFromGitHub {
     owner = "InternetUnexplorer";
