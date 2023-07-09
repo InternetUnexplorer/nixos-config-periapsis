@@ -13,11 +13,10 @@
   };
 
   outputs = inputs: {
-    nixosConfigurations."periapsis-cc.c.elite-avatar-187222.internal" =
-      inputs.nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [ ./configuration.nix ];
-        specialArgs = { inherit inputs; };
-      };
+    nixosConfigurations.periapsis = inputs.nixpkgs.lib.nixosSystem {
+      system = "x86_64-linux";
+      modules = [ ./configuration.nix ];
+      specialArgs = { inherit inputs; };
+    };
   };
 }

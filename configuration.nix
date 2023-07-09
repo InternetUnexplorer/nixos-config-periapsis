@@ -1,5 +1,5 @@
 # Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
+# your system. Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, lib, modulesPath, ... }:
@@ -13,11 +13,13 @@
     ./services/oobot.nix
   ];
 
-  nix = {
-    package = pkgs.nixFlakes;
-    settings.auto-optimise-store = true;
-    settings.experimental-features = "nix-command flakes";
-    settings.trusted-users = [ "@wheel" ];
+  system.name = "periapsis";
+
+  nix.settings = {
+    auto-allocate-uids = true;
+    auto-optimise-store = true;
+    experimental-features = [ "flakes" "nix-command" ];
+    trusted-users = [ "@wheel" ];
   };
 
   nix.gc = {

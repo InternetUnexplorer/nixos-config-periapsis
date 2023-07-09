@@ -22,6 +22,5 @@ $ rsync -rzlp --delete --rsync-path="sudo rsync" . periapsis.cc:/etc/nixos
 #### Build system configuration locally and activate on remote
 
 ```bash
-$ HOSTNAME=$(nix flake show --json | jq -r '.nixosConfigurations | keys[0]')
-$ nixos-rebuild switch --flake ".#$HOSTNAME" --target-host periapsis.cc --use-substitutes
+$ nixos-rebuild switch --flake .#periapsis --target-host periapsis.cc --use-substitutes
 ```
