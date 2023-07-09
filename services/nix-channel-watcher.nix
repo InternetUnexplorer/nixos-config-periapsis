@@ -1,4 +1,4 @@
-{ config, pkgs, lib, modulesPath, ... }:
+{ config, pkgs, lib, modulesPath, inputs, ... }:
 
 # The nix-channel-watcher service checks the nixos-unstable channel periodically
 # and sends repository_dispatch events to a list of repositories when the
@@ -6,17 +6,10 @@
 #
 # It expects /etc/github-token to exist and contain GITHUB_TOKEN=<token>, where
 # <token> is a GitHub fine-grained personal access token with write access for
-# the "Contents" permission (used to send the repository_dispatch events)
+# the "Contents" permission (used to send the repository_dispatch events).
 
 let
   repositories = [ "InternetUnexplorer/nixpkgs-overlay" ];
-
-  nix-channel-watcher = pkgs.fetchFromGitHub {
-    owner = "InternetUnexplorer";
-    repo = "nix-channel-watcher";
-    rev = "e903de3aed320d39322d1df42f56c8c8e5fdeca9";
-    hash = "sha256-ewD5SVD3eXzIDGCTuIMxutUOAHTQ1DoHnnCsTkVgDZg=";
-  };
 
   nixos-unstable-hooks = let
     requestData = builtins.toJSON {
@@ -57,7 +50,7 @@ in {
       ln -snf ${nixos-unstable-hooks} ./nixos-unstable.hooks
 
       # Run the script
-      python3 ${nix-channel-watcher}/channel-watcher.py
+      python3 ${inputs.nix-channel-watcher}/channel-watcher.py
     '';
 
     startAt = "*:0/5"; # Every 5 minutes
