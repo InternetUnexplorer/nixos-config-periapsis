@@ -1,12 +1,44 @@
 {
   "nodes": {
+    "discord-overlay": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1688874484,
+        "narHash": "sha256-xn40bggUeom/f9IFvK+L8NTQxihS2i3PcDOyQ1EiEtM=",
+        "owner": "InternetUnexplorer",
+        "repo": "discord-overlay",
+        "rev": "04723927687c4589b0a8d5eb198a3f066756b5ac",
+        "type": "github"
+      },
+      "original": {
+        "owner": "InternetUnexplorer",
+        "repo": "discord-overlay",
+        "type": "github"
+      }
+    },
+    "nix-channel-watcher": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1632447899,
+        "narHash": "sha256-ewD5SVD3eXzIDGCTuIMxutUOAHTQ1DoHnnCsTkVgDZg=",
+        "owner": "InternetUnexplorer",
+        "repo": "nix-channel-watcher",
+        "rev": "e903de3aed320d39322d1df42f56c8c8e5fdeca9",
+        "type": "github"
+      },
+      "original": {
+        "owner": "InternetUnexplorer",
+        "repo": "nix-channel-watcher",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1687681650,
-        "narHash": "sha256-M2If+gRcfpmaJy/XbfSsRzLlPpoU4nr0NHnKKl50fd8=",
+        "lastModified": 1688679045,
+        "narHash": "sha256-t3xGEfYIwhaLTPU8FLtN/pLPytNeDwbLI6a7XFFBlGo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "1c9db9710cb23d60570ad4d7ab829c2d34403de3",
+        "rev": "3c7487575d9445185249a159046cc02ff364bff8",
         "type": "github"
       },
       "original": {
@@ -16,9 +48,28 @@
         "type": "github"
       }
     },
+    "oobot": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1674115000,
+        "narHash": "sha256-kmtlSOYr2n9Ds3uWQQyqJCWKGPh/6g1/Ht241W7djlY=",
+        "owner": "InternetUnexplorer",
+        "repo": "oobot",
+        "rev": "2365f9ba21b69b95fda59f166aa60ecff8af6cdf",
+        "type": "github"
+      },
+      "original": {
+        "owner": "InternetUnexplorer",
+        "repo": "oobot",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "discord-overlay": "discord-overlay",
+        "nix-channel-watcher": "nix-channel-watcher",
+        "nixpkgs": "nixpkgs",
+        "oobot": "oobot"
       }
     }
   },
