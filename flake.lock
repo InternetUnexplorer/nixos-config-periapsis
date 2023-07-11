@@ -1,5 +1,17 @@
 {
   "nodes": {
+    "authorized-keys": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-aw0bE20mALj1YT0qt6E6JNcaGHtbmHywBSl6aJL4HHA=",
+        "type": "file",
+        "url": "https://github.com/InternetUnexplorer.keys"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/InternetUnexplorer.keys"
+      }
+    },
     "discord-overlay": {
       "flake": false,
       "locked": {
@@ -66,6 +78,7 @@
     },
     "root": {
       "inputs": {
+        "authorized-keys": "authorized-keys",
         "discord-overlay": "discord-overlay",
         "nix-channel-watcher": "nix-channel-watcher",
         "nixpkgs": "nixpkgs",

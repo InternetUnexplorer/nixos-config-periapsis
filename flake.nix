@@ -4,10 +4,15 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    authorized-keys.url = "https://github.com/InternetUnexplorer.keys";
+    authorized-keys.flake = false;
+
     discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
     discord-overlay.flake = false;
+
     nix-channel-watcher.url = "github:InternetUnexplorer/nix-channel-watcher";
     nix-channel-watcher.flake = false;
+
     oobot.url = "github:InternetUnexplorer/oobot";
     oobot.flake = false;
   };

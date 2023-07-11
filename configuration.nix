@@ -2,7 +2,7 @@
 # your system. Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, lib, modulesPath, ... }:
+{ config, pkgs, lib, modulesPath, inputs, ... }:
 
 {
   imports = [
@@ -54,7 +54,7 @@
     shell = pkgs.fish;
     extraGroups = [ "wheel" ];
     createHome = true;
-    openssh.authorizedKeys.keyFiles = [ ./authorized_keys ];
+    openssh.authorizedKeys.keyFiles = [ inputs.authorized-keys ];
   };
 
   environment = {
