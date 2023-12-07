@@ -3,7 +3,7 @@
     "authorized-keys": {
       "flake": false,
       "locked": {
-        "narHash": "sha256-aw0bE20mALj1YT0qt6E6JNcaGHtbmHywBSl6aJL4HHA=",
+        "narHash": "sha256-aXBWyrsESfck6jNlOP8/FK+qCgRIT+LE37J8Q8hZgpM=",
         "type": "file",
         "url": "https://github.com/InternetUnexplorer.keys"
       },
@@ -15,11 +15,11 @@
     "discord-overlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1688874484,
-        "narHash": "sha256-xn40bggUeom/f9IFvK+L8NTQxihS2i3PcDOyQ1EiEtM=",
+        "lastModified": 1701832841,
+        "narHash": "sha256-tOnYCRjTXET+G+xch7qf+w2COEAjehWwK7PZJXJwnRE=",
         "owner": "InternetUnexplorer",
         "repo": "discord-overlay",
-        "rev": "04723927687c4589b0a8d5eb198a3f066756b5ac",
+        "rev": "136f79e3a907b877953aa43f35b17e785567add3",
         "type": "github"
       },
       "original": {
@@ -46,11 +46,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1688679045,
-        "narHash": "sha256-t3xGEfYIwhaLTPU8FLtN/pLPytNeDwbLI6a7XFFBlGo=",
+        "lastModified": 1701718080,
+        "narHash": "sha256-6ovz0pG76dE0P170pmmZex1wWcQoeiomUZGggfH9XPs=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "3c7487575d9445185249a159046cc02ff364bff8",
+        "rev": "2c7f3c0fb7c08a0814627611d9d7d45ab6d75335",
         "type": "github"
       },
       "original": {
