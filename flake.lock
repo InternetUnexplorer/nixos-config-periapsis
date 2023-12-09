@@ -15,11 +15,11 @@
     "discord-overlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1701832841,
-        "narHash": "sha256-tOnYCRjTXET+G+xch7qf+w2COEAjehWwK7PZJXJwnRE=",
+        "lastModified": 1702083677,
+        "narHash": "sha256-7aOAUsQNLaslbNyg+1NgCfTn8+ay+9XEG6O4/vdpFCE=",
         "owner": "InternetUnexplorer",
         "repo": "discord-overlay",
-        "rev": "136f79e3a907b877953aa43f35b17e785567add3",
+        "rev": "b46bd557a6b9d5eea8e27935a31c0d05822aee8b",
         "type": "github"
       },
       "original": {
