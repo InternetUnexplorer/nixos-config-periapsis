@@ -21,6 +21,9 @@
       DynamicUser = true;
       EnvironmentFile = "/etc/oobot-env";
 
+      Restart = "on-failure";
+      RestartSec = 5;
+
       Environment = [ "PYTHONUNBUFFERED=1" "VERBOSE=1" ];
 
       PrivateDevices = true;
