@@ -4,9 +4,6 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
-    authorized-keys.url = "https://github.com/InternetUnexplorer.keys";
-    authorized-keys.flake = false;
-
     discord-overlay.url = "github:InternetUnexplorer/discord-overlay";
     discord-overlay.flake = false;
 
@@ -18,7 +15,7 @@
   };
 
   outputs = inputs: {
-    nixosConfigurations.periapsis = inputs.nixpkgs.lib.nixosSystem {
+    nixosConfigurations.periapsis-cc = inputs.nixpkgs.lib.nixosSystem {
       system = "x86_64-linux";
       modules = [ ./configuration.nix ];
       specialArgs = { inherit inputs; };

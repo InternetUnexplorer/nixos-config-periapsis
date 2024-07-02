@@ -30,15 +30,16 @@
 
   boot.kernelPackages = pkgs.linuxPackages_hardened;
 
-  services.openssh = {
-    enable = true;
-    settings.PasswordAuthentication = false;
-    settings.KbdInteractiveAuthentication = false;
-  };
+  # For serial rescue
+  users.mutableUsers = false;
+  users.users.root.hashedPassword =
+    "$y$j9T$IlbbRs13NNzbfaycUIeTF.$NS9xUhNuPhZANu9pkRKsrlImDEUWpjVD42WlV7Sit48";
 
-  networking.firewall.enable = true;
+  services.tailscale.enable = true;
+  services.tailscale.extraUpFlags = [ "--advertise-exit-node" "--ssh" ];
+  services.tailscale.useRoutingFeatures = "server";
 
-  services.fail2ban.enable = true;
+  services.openssh.enable = lib.mkForce false;
 
   programs.fish = {
     enable = true;
@@ -54,7 +55,6 @@
     shell = pkgs.fish;
     extraGroups = [ "wheel" ];
     createHome = true;
-    openssh.authorizedKeys.keyFiles = [ inputs.authorized-keys ];
   };
 
   environment = {
