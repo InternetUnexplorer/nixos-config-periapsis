@@ -1,25 +1,13 @@
 {
   "nodes": {
-    "authorized-keys": {
-      "flake": false,
-      "locked": {
-        "narHash": "sha256-aXBWyrsESfck6jNlOP8/FK+qCgRIT+LE37J8Q8hZgpM=",
-        "type": "file",
-        "url": "https://github.com/InternetUnexplorer.keys"
-      },
-      "original": {
-        "type": "file",
-        "url": "https://github.com/InternetUnexplorer.keys"
-      }
-    },
     "discord-overlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1711486820,
-        "narHash": "sha256-ZDGDWsNSGou/iwqbujT6IIvo/gQh2ZVRyDwGCIENtlM=",
+        "lastModified": 1719880220,
+        "narHash": "sha256-2tRb/Iak2lOHU1+lHn2/DIVKkkDICKJph3TlWvy0bTE=",
         "owner": "InternetUnexplorer",
         "repo": "discord-overlay",
-        "rev": "d0dfd1902badb66fa29f94a5992224cc62030e51",
+        "rev": "64bbc72c6cdf741f714136791ef8998080e62f2d",
         "type": "github"
       },
       "original": {
@@ -46,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1711703276,
-        "narHash": "sha256-iMUFArF0WCatKK6RzfUJknjem0H9m4KgorO/p3Dopkk=",
+        "lastModified": 1719690277,
+        "narHash": "sha256-0xSej1g7eP2kaUF+JQp8jdyNmpmCJKRpO12mKl/36Kc=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "d8fe5e6c92d0d190646fb9f1056741a229980089",
+        "rev": "2741b4b489b55df32afac57bc4bfd220e8bf617e",
         "type": "github"
       },
       "original": {
@@ -78,7 +66,6 @@
     },
     "root": {
       "inputs": {
-        "authorized-keys": "authorized-keys",
         "discord-overlay": "discord-overlay",
         "nix-channel-watcher": "nix-channel-watcher",
         "nixpkgs": "nixpkgs",
