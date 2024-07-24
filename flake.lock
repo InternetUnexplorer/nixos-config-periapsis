@@ -51,11 +51,11 @@
     "oobot": {
       "flake": false,
       "locked": {
-        "lastModified": 1721848962,
-        "narHash": "sha256-K+mCGQIZG7G0XqcWAF9gcz4fLOi6VCHO/ADsFC+0vhk=",
+        "lastModified": 1721853901,
+        "narHash": "sha256-rtaKU7vFpDbaIfje97N+Ii2aK+7z4iJ1XECNyW7bL0c=",
         "owner": "InternetUnexplorer",
         "repo": "oobot",
-        "rev": "f504f353426940ed2eebc30b20b75173baf156c8",
+        "rev": "90d6c5b3d22d530eb273ed466c4a4679a0c59d02",
         "type": "github"
       },
       "original": {
