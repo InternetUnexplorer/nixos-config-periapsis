@@ -15,7 +15,7 @@
     file_server
     encode zstd gzip
 
-    header / Strict-Transport-Security "max-age=31536000;"
+    header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
     handle_errors {
       respond "{http.error.status_code} {http.error.status_text}"
