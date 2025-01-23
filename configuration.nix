@@ -18,7 +18,7 @@
   nix.settings = {
     auto-allocate-uids = true;
     auto-optimise-store = true;
-    experimental-features = [ "flakes" "nix-command" ];
+    experimental-features = [ "auto-allocate-uids" "flakes" "nix-command" ];
     trusted-users = [ "@wheel" ];
   };
 
@@ -39,7 +39,9 @@
   services.tailscale.extraUpFlags = [ "--advertise-exit-node" "--ssh" ];
   services.tailscale.useRoutingFeatures = "server";
 
-  services.openssh.enable = lib.mkForce false;
+  services.openssh.enable = true;
+  services.openssh.settings.PasswordAuthentication = false;
+  services.fail2ban.enable = true;
 
   programs.fish = {
     enable = true;
