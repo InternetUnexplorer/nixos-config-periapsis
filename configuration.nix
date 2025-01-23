@@ -43,6 +43,8 @@
   services.openssh.settings.PasswordAuthentication = false;
   services.fail2ban.enable = true;
 
+  networking.firewall.enable = lib.mkForce true;
+
   programs.fish = {
     enable = true;
     useBabelfish = true;
