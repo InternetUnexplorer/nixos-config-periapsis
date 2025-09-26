@@ -3,11 +3,11 @@
     "discord-overlay": {
       "flake": false,
       "locked": {
-        "lastModified": 1753988435,
-        "narHash": "sha256-oAKtogNKWmr88VfLvAqsD96pDV916leA/wxWCXXr6dw=",
+        "lastModified": 1758843016,
+        "narHash": "sha256-doOFasMpVRLyGf3yU90eZR8Rk81AsV3LL8Re+Vffp/k=",
         "owner": "InternetUnexplorer",
         "repo": "discord-overlay",
-        "rev": "c2e92e7c4bb46f242b1666d00cb1e3b7813f50c9",
+        "rev": "267ec4afaa2274b8412ff794a7cd9b433968dab5",
         "type": "github"
       },
       "original": {
@@ -34,11 +34,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1753939845,
-        "narHash": "sha256-K2ViRJfdVGE8tpJejs8Qpvvejks1+A4GQej/lBk5y7I=",
+        "lastModified": 1758690382,
+        "narHash": "sha256-NY3kSorgqE5LMm1LqNwGne3ZLMF2/ILgLpFr1fS4X3o=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "94def634a20494ee057c76998843c015909d6311",
+        "rev": "e643668fd71b949c53f8626614b21ff71a07379d",
         "type": "github"
       },
       "original": {
