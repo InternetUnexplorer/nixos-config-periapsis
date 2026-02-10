@@ -53,13 +53,13 @@
       "locked": {
         "lastModified": 1726203474,
         "narHash": "sha256-B6meogED/ohxGpZz7+Jc+uFtcxLzeVdq4Lcc94vOFKQ=",
-        "owner": "InternetUnexplorer",
+        "owner": "reed-cs-and-friends",
         "repo": "oobot",
         "rev": "0a5dfc4e23a287efdf2aed70b61b5bbd47de0685",
         "type": "github"
       },
       "original": {
-        "owner": "InternetUnexplorer",
+        "owner": "reed-cs-and-friends",
         "repo": "oobot",
         "type": "github"
       }

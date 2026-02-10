@@ -10,7 +10,7 @@
     nix-channel-watcher.url = "github:InternetUnexplorer/nix-channel-watcher";
     nix-channel-watcher.flake = false;
 
-    oobot.url = "github:InternetUnexplorer/oobot";
+    oobot.url = "github:reed-cs-and-friends/oobot";
     oobot.flake = false;
   };
 
