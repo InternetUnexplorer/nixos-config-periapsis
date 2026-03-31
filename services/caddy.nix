@@ -10,10 +10,14 @@
     email = "internetunexplorer@gmail.com";
   };
 
+  services.caddy.virtualHosts.":80".extraConfig = ''
+    redir https://periapsis.cc{uri}
+  '';
+
   services.caddy.virtualHosts."periapsis.cc".extraConfig = ''
-    root * /srv/periapsis.cc
+    root /srv/periapsis.cc
+    encode
     file_server
-    encode zstd gzip
 
     header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
 
