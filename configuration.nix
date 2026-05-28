@@ -28,8 +28,6 @@
     options = "--delete-old";
   };
 
-  boot.kernelPackages = pkgs.linuxPackages_hardened;
-
   # For serial rescue
   users.mutableUsers = false;
   users.users.root.hashedPassword =
